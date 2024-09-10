@@ -1,3 +1,4 @@
+"use client"
 import ArrowRight from '../assets/arrow-right.svg'
 import cogImage from '../assets/cog.png'
 import Image from 'next/image'
