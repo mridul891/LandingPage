@@ -4,8 +4,11 @@ import cogImage from '../assets/cog.png'
 import Image from 'next/image'
 import cylinderImage from '../assets/cylinder.png'
 import noodleImage from '../assets/noodle.png'
+import {motion} from 'framer-motion'
+
 
 export const Hero = () => {
+
     return (
         <section className="pt-8 pb-20 md:pt-5 md:pb-40 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,_#183EC2,_#EAEEFE_100%)] overflow-x-clip lg:px-20 ">
             <div className="px-5 lg:px-20">
@@ -24,7 +27,22 @@ export const Hero = () => {
                     </div>
 
                     <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative ">
-                        <Image src={cogImage} alt="cog Image" height={400} width={400} className='pr-10 md:absolute md:h-full md:w-auto md: max-w-none md:-left-6 lg:left-0 ' />
+                        <motion.img
+                            src={cogImage.src}
+                            alt="cog Image"
+                            height={400}
+                            width={400}
+                            className='pr-10 md:absolute md:h-full md:w-auto md: max-w-none md:-left-6 lg:left-0 ' 
+                            animate={{
+                                translateY:[-30,30]
+                            }}
+                            transition={{
+                                repeat : Infinity,
+                                repeatType :"mirror",
+                                duration:3,
+                                ease : "easeInOut"
+                            }}
+                            />
                         <Image
                             src={cylinderImage}
                             width={220}
