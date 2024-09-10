@@ -11,7 +11,7 @@ export const Hero = () => {
             <div className="px-5 lg:px-20">
                 <div className="md:flex items-center lg:flex  lg:justify-between lg:gap-20  ">
                     <div className="md:w-[478px] lg:w-[600px] ">
-                        <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight xl:text-lg">Version 2.0 is here</div>
+                        <div className="tag">Version 2.0 is here</div>
                         <h1 className=" text-5xl md:text-7xl lg:text-[4.9rem]  font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">Pathway to Productivity</h1>
                         <p className="text-xl text-[#010d3e] tracking-tight mt-6 ">
                             Celebrate the joy of accomplishment with an app designed to track your progress , motivate your efforts . and celebrate your successes.

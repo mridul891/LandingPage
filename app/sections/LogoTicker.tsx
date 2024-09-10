@@ -12,9 +12,11 @@ import Image from 'next/image'
 const LogoTicker = () => {
     return (
         <div className='py-8 md:p-12 lg:px-[7rem] lg:py-12 bg-white'>
-            <div className="container">
-                <div className="flex overflow-hidden justify-center  [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-                    <div className="flex gap-14 flex-none ">
+            <div className="">
+                <div className="max-w-[540px] mx-auto">
+
+                <div className="flex overflow-hidden justify-center [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+                    <div className="flex gap-5 md:gap-14 lg:gap-14 flex-none ">
                         <Image src={echoLogo} alt='echo logo' className='logo-ticker-image' />
                         <Image src={acmeLogo} alt='Acme logo' className='logo-ticker-image' />
                         <Image src={celestialLogo} alt='celestial logo' className='logo-ticker-image' />
@@ -22,6 +24,7 @@ const LogoTicker = () => {
                         <Image src={apexLogo} alt='Apex logo' className='logo-ticker-image' />
                         <Image src={quantumLogo} alt='quantum logo' className='logo-ticker-image' />
                     </div>
+                </div>
 
                 </div>
             </div>
