@@ -1,4 +1,7 @@
+import Header from "./sections/Header";
 
 export default function Home() {
-  return (<div>Hello</div>);
+  return (<div>
+    <Header />
+  </div>);
 }
