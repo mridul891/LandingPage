@@ -3,7 +3,7 @@ import React from 'react'
 import {twMerge} from "tailwind-merge"
 
 
-const TestimonialsColumns = (props: { className?: string; testimonial: typeof testimonials }, index: Number) => {
+const TestimonialsColumns = (props: { className?: string; testimonial: typeof testimonials }) => {
     return (
         <div className={twMerge("flex flex-col items-center mt-10 gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",props.className)} >
             {props.testimonial.map(({ text, imageSrc, name, username }, index) => (
