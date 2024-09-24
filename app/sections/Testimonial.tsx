@@ -81,10 +81,10 @@ export const Testimonial = () => {
             <h2 className="section-title"> What our users say </h2>
             <p className="section-description mt-5">From intutive design to powerful features, our app has become essential tool for users around the world. </p>
             
-            <div className = "flex justify-center gap-6">
+            <div className = "flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
                 <TestimonialsColumns testimonial={firstColumn} />
-                <TestimonialsColumns testimonial={secondColumn} className="hidden md:flex "/>
-                <TestimonialsColumns testimonial={thirdColumn} className="hidden lg:flex"/>
+                <TestimonialsColumns testimonial={secondColumn} className="hidden md:block "/>
+                <TestimonialsColumns testimonial={thirdColumn} className="hidden lg:block"/>
 
             </div>
         </div>

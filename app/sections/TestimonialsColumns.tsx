@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import {twMerge} from "tailwind-merge"
+
+import { motion } from 'framer-motion';
 const testimonials = [
 
     {
         text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
-        imageSrc:" avatar1.src",
+        imageSrc: " avatar1.src",
         name: "Jamie Rivera",
         username: "@jamietechguru00",
     },
@@ -17,7 +18,7 @@ const testimonials = [
     },
     {
         text: "This app has completely transformed how I manage my projects and deadlines.",
-        imageSrc:" avatar3.src",
+        imageSrc: " avatar3.src",
         name: "Morgan Lee",
         username: "@morganleewhiz",
     },
@@ -41,13 +42,13 @@ const testimonials = [
     },
     {
         text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
-        imageSrc:" avatar7.src",
+        imageSrc: " avatar7.src",
         name: "Jordan Patels",
         username: "@jpatelsdesign",
     },
     {
         text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
-        imageSrc:" avatar8.src",
+        imageSrc: " avatar8.src",
         name: "Sam Dawson",
         username: "@dawsontechtips",
     },
@@ -61,26 +62,34 @@ const testimonials = [
 
 const TestimonialsColumns = (props: { className?: string; testimonial: typeof testimonials }) => {
     return (
-        <div className={twMerge("flex flex-col items-center mt-10 gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",props.className)} >
-            {props.testimonial.map(({ text, imageSrc, name, username }, index) => (
-                <div className="cards" key={index}>
-                    <div>{text} </div>
-                    <div className="flex items-center gap-2 mt-5">
-                        <Image
-                            src={imageSrc}
-                            alt={name}
-                            width={40}
-                            height={40}
-                            className="rounded-full"
-                        />
-                        <div className="flex flex-col">
-                            <div className="font-medium tracking-tighter leading-5">{name}</div>
-                            <div className="leading-5 tracking-tight">{username}</div>
+        <div className={props.className}>
+            <motion.div animate={{translateY: "-50%"}}
+                transition={{ duration:10,repeat: Infinity, ease: "linear", repeatType: "loop"}}
+                className="flex flex-col items-center gap-6 pb-6" >
+                {[...new Array(2)].fill(0).map((_, index) => (
+                    <React.Fragment key={index}>
+                        {props.testimonial.map(({ text, imageSrc, name, username }, index) => (
+                            <div className="cards" key={index}>
+                                <div>{text} </div>
+                                <div className="flex items-center gap-2 mt-5">
+                                    <Image
+                                        src={imageSrc}
+                                        alt={name}
+                                        width={40}
+                                        height={40}
+                                        className="rounded-full"
+                                    />
+                                    <div className="flex flex-col">
+                                        <div className="font-medium tracking-tighter leading-5">{name}</div>
+                                        <div className="leading-5 tracking-tight">{username}</div>
 
-                        </div>
-                    </div>
-                </div>
-            ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </React.Fragment>
+                ))}
+            </motion.div>
         </div>
     )
 }
