@@ -12,7 +12,7 @@ const CalltoAction = () => {
                         <p className="section-description mt-5 z-10">Celebrate the joy of accoplishment with an app designed tp track your progress and  motivate your efforts.</p>
                     </div>
 
-                    <Image src={starImage} alt="Star Image" width={360} className="hidden md:block md:absolute lg:left-[2px] md:-top-[60px] md:-left-[200px]" />
+                    <Image src={starImage} alt="Star Image" width={360} className="hidden md:block md:absolute lg:left-0 md:-top-[10px] md:-left-[220px]" />
                     <Image src={springImage} alt="spring Image" width={360} className="hidden md:block absolute lg:-right-[100px] lg:-top-[25px] md:-right-[200px] md:-top-[10px]" />
                 </div>
                 <div className="flex justify-center  mt-10">
